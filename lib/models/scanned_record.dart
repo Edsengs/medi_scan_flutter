@@ -5,6 +5,7 @@ class ScannedRecord {
   final bool wasFound;
   final String scanDate;
   final int timestamp;
+  final String? expirationDate;
 
   ScannedRecord({
     required this.scannedCode,
@@ -13,6 +14,7 @@ class ScannedRecord {
     required this.wasFound,
     required this.scanDate,
     required this.timestamp,
+    this.expirationDate,
   });
 
   Map<String, dynamic> toJson() {
@@ -23,6 +25,7 @@ class ScannedRecord {
       'wasFound': wasFound,
       'scanDate': scanDate,
       'timestamp': timestamp,
+      'expirationDate': expirationDate,
     };
   }
 }

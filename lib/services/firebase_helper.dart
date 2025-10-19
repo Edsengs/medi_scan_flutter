@@ -29,6 +29,7 @@ class FirebaseHelper {
       wasFound: drug != null,
       scanDate: DateFormat('yyyy-MM-dd HH:mm:ss').format(now),
       timestamp: now.millisecondsSinceEpoch,
+      expirationDate: drug?.expirationDate,
     );
     await _historyRef.push().set(record.toJson());
   }

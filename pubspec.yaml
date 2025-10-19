@@ -15,16 +15,20 @@ dependencies:
   firebase_core: ^3.1.1
   firebase_database: ^11.0.1
 
-  # Barcode Scanner
-  flutter_barcode_scanner: ^2.0.0
+  # Barcode Scanning
+  mobile_scanner: ^7.1.2       # ✅ Works for iOS, Android, and Web (real-time camera)
+  # flutter_barcode_sdk: 2.2.0  # ❌ Removed to avoid conflict — not needed anymore
 
-  # For date formatting
-  intl: ^0.19.0
+  # Permissions (for mobile platforms)
+  permission_handler: ^11.1.0
 
-  # For launching emails
-  url_launcher: ^6.3.0
+  # Utilities
+  intl: ^0.19.0                 # Date/time formatting
+  url_launcher: ^6.3.0          # For launching links or emails
 
+  # UI & Icons
   cupertino_icons: ^1.0.2
+  flutter_launcher_icons: ^0.14.4
 
 dev_dependencies:
   flutter_test:
@@ -33,8 +37,13 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/icon_nobg.png
+    - assets/icon/icon.png
 
-  # If you add a logo image to an 'assets' folder, uncomment these lines
-  # assets:
-  #   - assets/app_logo.jpg
-
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/icon/icon.png"
+  adaptive_icon_background: "#ffffff"
+  adaptive_icon_foreground: "assets/icon/icon.png"

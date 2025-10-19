@@ -5,8 +5,8 @@ import 'package:medi_scan_flutter/screens/add_medicine_screen.dart';
 import 'package:medi_scan_flutter/screens/history_screen.dart';
 import 'package:medi_scan_flutter/screens/home_screen.dart';
 import 'package:medi_scan_flutter/screens/result_screen.dart';
-import 'package:medi_scan_flutter/screens/splash_screen.dart';
 import 'package:medi_scan_flutter/models/drug_data.dart';
+
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -39,9 +39,8 @@ class MediScanApp extends StatelessWidget {
         ),
       ),
       debugShowCheckedModeBanner: false,
-      initialRoute: '/',
+      initialRoute: '/home',
       routes: {
-        '/': (context) => const SplashScreen(),
         '/home': (context) => const HomeScreen(),
         '/add_medicine': (context) => const AddMedicineScreen(),
         '/history': (context) => const HistoryScreen(),
